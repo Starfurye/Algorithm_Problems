@@ -51,7 +51,7 @@ void print() {for (int i = Num1.len - 1; i >= 0; --i)	printf("%d", Num1.d[i]);}
 int main()
 {
 	char str[20];
-	scanf("%s", str, sizeof(str));
+	scanf("%s", str);
 	Num1 = change(str);
 	if (judge()) {
 		print();
