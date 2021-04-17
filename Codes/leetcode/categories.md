@@ -137,7 +137,11 @@ int right_bound(int[] nums, int target) {
 
 1-两数之和
 
-## HU-回溯法
+## HUA-滑动窗口
+
+220-存在重复元素 III
+
+## HUI-回溯法
 
 ```java
 void backtracking(参数) {
@@ -169,7 +173,7 @@ void backtracking(参数) {
 
 ## S-双指针
 
-15-三数之和、27-移除元素、658-找到 K 个最接近的元素
+15-三数之和、18-四数之和、27-移除元素、658-找到 K 个最接近的元素
 
 ## Z-栈模拟
 
