@@ -107,6 +107,28 @@ int left_bound(int[] nums, int target) {
 
 注意`left = mid + 1`和`right = mid`是由于`right = nums.length`，为左闭右开区间，比完mid后要去掉。
 
+[另一种判断](./1482-制作 m 束花所需的最少天数)：
+
+```js
+...
+let left = m * k - 1;
+let right = len;                    // 左闭右开
+while (left < right) {
+    let mid = Math.floor(left + (right - left) / 2);
+    let res = check(arr[mid]);
+    if (res) {						// 两种情况
+        right = mid;
+    } else {
+        left = mid + 1;
+    }
+}
+...
+```
+
+1482-制作 m 束花所需的最少天数
+
+
+
 ### 找右侧边界
 
 ```java
