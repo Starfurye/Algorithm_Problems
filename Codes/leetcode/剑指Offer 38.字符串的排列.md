@@ -21,6 +21,41 @@
 
 同lc47-全排列II。
 
+### javascript
+
+```js
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var permutation = function(s) {
+    let res = [], temp = [];
+    let arr = s.split('');
+    let visited = new Array(arr.length).fill(0);
+    var backtrack = () => {
+        if (temp.length === arr.length) {
+            res.push([...temp].join(''));
+            return;
+        }
+        for (let i = 0; i < arr.length; i++) {
+            // 剪枝，当前元素和前一个元素相同且前一个元素未访问过则为重复元素
+            if (i > 0 && arr[i] === arr[i - 1] && visited[i - 1] === 0) continue;
+            if (visited[i] === 1) continue;
+            visited[i] = 1;
+            temp.push(arr[i]);
+            backtrack();
+            temp.pop();
+            visited[i] = 0;
+        }
+    };
+    arr.sort();
+    backtrack();
+    return res;
+};
+```
+
+### java
+
 ```java
 class Solution {
     int[] visited;

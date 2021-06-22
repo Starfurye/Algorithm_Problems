@@ -16,7 +16,9 @@
 | 真假问题     |                                              |
 | 最大最小问题 | 474-一和零                                   |
 
+如果求组合数就是外层for循环遍历物品，内层for遍历背包。
 
+如果求排列数就是外层for遍历背包，内层for循环遍历物品。
 
 reference: https://leetcode-cn.com/problems/combination-sum-iv/solution/xi-wang-yong-yi-chong-gui-lu-gao-ding-bei-bao-wen-/
 
