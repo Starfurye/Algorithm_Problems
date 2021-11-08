@@ -33,6 +33,32 @@
  * @return {number}
  */
 var search = function(nums, target) {
+    // 找左边界
+    let left = 0, right = nums.length;
+    while (left < right) {
+        let mid = Math.floor((right - left) / 2 + left);
+        if (target <= nums[mid]) {
+            right = mid;
+        } else if (target > nums[mid]) {
+            left = mid + 1;
+        }
+    }
+    let count = 0;
+    for (let i = left; i < nums.length; i++) {
+        if (nums[i] == target) count++;
+        else break;
+    }
+    return count;
+};
+```
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function(nums, target) {
 	var binarySearch = () => {
         let left = 0, right = nums.length - 1;  // 闭区间
     	while (left <= right) {

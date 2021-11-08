@@ -25,16 +25,16 @@ var replaceSpace = function(s) {
         if (c === ' ') spaceCount++;
     }
 
-    let left = s.length - 1;
-    s.length += 2 * spaceCount;
-    let right = s.length - 1;
-    while (left >= 0) {
-        if (s[left] === ' ') {
+    let left = s.length - 1;			// left指向原字符串末尾字符
+    s.length += 2 * spaceCount;			// 给空格腾出空间
+    let right = s.length - 1;			// right指向增加了空格空间后的实际末尾字符
+    while (left >= 0) {					// 倒着遍历
+        if (s[left] === ' ') {			// 替换
             s[right--] = '0';
             s[right--] = '2';
             s[right--] = '%'; 
         } else {
-            s[right--] = s[left];
+            s[right--] = s[left];		// 直接复制
         }
         left--;
     }
@@ -42,3 +42,14 @@ var replaceSpace = function(s) {
 };
 ```
 
+### 库函数
+
+```js
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var replaceSpace = function(s) {
+    return s.split(' ').reduce((pre, next) => pre + "%20" + next);
+};
+```
