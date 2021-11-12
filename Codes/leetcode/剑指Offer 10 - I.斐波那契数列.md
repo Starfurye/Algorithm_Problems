@@ -33,6 +33,8 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 ### 动态规划
 
+#### v1
+
 ```js
 /**
  * @param {number} n
@@ -52,9 +54,30 @@ var fib = function(n) {
 };
 ```
 
+#### v2
+
+```js
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var fib = function(n) {
+    if (n == 0) return 0;
+    else if (n == 1) return 1;
+
+    let pre = 0, back = 1;
+    for (let i = 2; i <= n; i++) {
+        let temp = pre;
+        pre = back;
+        back = (temp + back) % (1e9 + 7);
+    }
+    return back;
+};
+```
+
 ### 矩阵快速幂
 
-![递推](https://i.loli.net/2021/09/04/sP7Sk5gahuvFOim.png)
+![image-20210904111318734.png](https://i.loli.net/2021/09/04/sP7Sk5gahuvFOim.png)
 
 ```js
 var fib = function(n) {
