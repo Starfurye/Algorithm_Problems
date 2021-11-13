@@ -39,3 +39,42 @@ var maxSubArray = function(nums) {
 };
 ```
 
+### 动态规划
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+    let dp = new Array(nums.length).fill(0);
+    dp[0] = nums[0];
+    let ans = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        // nums[i]加入或单独成为一段
+        dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+        ans = Math.max(ans, dp[i]);
+    }
+    return ans;
+};
+```
+
+#### 滚动数组
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+    let pre = nums[0];
+    let ans = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        // nums[i]加入或单独成为一段
+        pre = Math.max(pre + nums[i], nums[i]);
+        ans = Math.max(ans, pre);
+    }
+    return ans;
+};
+```
+
