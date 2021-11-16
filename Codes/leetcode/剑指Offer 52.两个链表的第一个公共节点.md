@@ -72,14 +72,16 @@
  * @return {ListNode}
  */
 var getIntersectionNode = function(headA, headB) {
-    if (headA === null || headB === null) {
-        return null;
-    }
+    if (!headA || !headB) return null;
+
     let pA = headA, pB = headB;
-    while (pA !== pB) {
-        pA = pA === null ? headB : pA.next;
-        pB = pB === null ? headA : pB.next;
+
+    // 如果没有交点，当 pA == pB == null 时也会退出
+    while (pA != pB) {
+        pA = pA == null ? headB : pA.next;
+        pB = pB == null ? headA : pB.next;
     }
+
     return pA;
 };
 ```
