@@ -1,8 +1,11 @@
-# 剑指 Offer 15. 二进制中1的个数
+# 剑指 Offer 15. 二进制中 1 的个数
 
-和[191-位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/)相同。
+编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为 [汉明重量](http://en.wikipedia.org/wiki/Hamming_weight)).）。
 
-请实现一个函数，输入一个整数（以二进制串形式），输出该数二进制表示中 1 的个数。例如，把 9 表示成二进制是 1001，有 2 位是 1。因此，如果输入 9，则该函数输出 2。
+提示：
+
+-   请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。
+-   在 Java 中，编译器使用 [二进制补码](https://baike.baidu.com/item/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81/5295284) 记法来表示有符号整数。因此，在下面的  **示例 3**  中，输入表示有符号整数 `-3`。
 
 **示例 1：**
 
@@ -30,23 +33,36 @@
 
 **提示：**
 
-- 输入必须是长度为 `32` 的 **二进制串** 。
+-   输入必须是长度为 `32` 的 **二进制串** 。
 
 ## Solution
+
+### 位运算
+
+注意由于 n 的最高位为符号位，不要让 n 移位来判断。
 
 ```js
 /**
  * @param {number} n - a positive integer
  * @return {number}
  */
-var hammingWeight = function(n) {
-    let res = 0;
+var hammingWeight = function (n) {
+    let ans = 0;
     for (let i = 0; i < 32; i++) {
-        if ((n & (1 << i)) !== 0) {
-            res++;
-        }
+        if (n & (1 << i)) ans++;
     }
-    return res;
+    return ans;
 };
 ```
 
+### 库函数
+
+```js
+/**
+ * @param {number} n - a positive integer
+ * @return {number}
+ */
+var hammingWeight = function (n) {
+    return n.toString(2).split("0").join("").length;
+};
+```

@@ -2,8 +2,6 @@
 
 Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which calculates `x` raised to the power `n` (i.e., `xn`).
 
- 
-
 **Example 1:**
 
 ```
@@ -26,13 +24,11 @@ Output: 0.25000
 Explanation: 2-2 = 1/22 = 1/4 = 0.25
 ```
 
- 
-
 **Constraints:**
 
-- `-100.0 < x < 100.0`
-- `-2^31 <= n <= 2^31-1`
-- `-10^4 <= xn <= 10^4`
+-   `-100.0 < x < 100.0`
+-   `-2^31 <= n <= 2^31-1`
+-   `-10^4 <= xn <= 10^4`
 
 ## Solution
 
@@ -46,7 +42,7 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
  * @param {number} n
  * @return {number}
  */
-var myPow = function(x, n) {
+var myPow = function (x, n) {
     return n >= 0 ? quickMul(x, n) : 1.0 / quickMul(x, -n);
 };
 const quickMul = (x, N) => {
@@ -55,8 +51,6 @@ const quickMul = (x, N) => {
     return N % 2 === 0 ? y * y : y * y * x;
 };
 ```
-
-
 
 ### 快速幂+迭代
 
@@ -72,7 +66,7 @@ $$
 x^{n} = x^{2^{i_{0}}} \times x^{2^{i_{1}}} \times ... \times x^{2^{i_{k}}}
 $$
 
-如果$n$的第$k$个二进制位为1，就将$x^{2^{i_{0}}}$计入。
+如果$n$的第$k$个二进制位为 1，就将$x^{2^{i_{0}}}$计入。
 
 ```js
 /**
@@ -80,7 +74,7 @@ $$
  * @param {number} n
  * @return {number}
  */
-var myPow = function(x, n) {
+var myPow = function (x, n) {
     return n >= 0 ? quickMul(x, n) : 1.0 / quickMul(x, -n);
 };
 const quickMul = (x, N) => {
@@ -97,4 +91,4 @@ const quickMul = (x, N) => {
 };
 ```
 
-*该方法通不过样例`myPow(2.00000, -2147483648)`。*
+_该方法通不过样例`myPow(2.00000, -2147483648)`。_
