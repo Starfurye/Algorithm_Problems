@@ -1,6 +1,6 @@
 # 剑指 Offer 04. 二维数组中的查找
 
-在一个 n * m 的二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个高效的函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+在一个 n \* m 的二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个高效的函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
 
 **示例:**
 
@@ -39,21 +39,23 @@
  * @param {number} target
  * @return {boolean}
  */
-var findNumberIn2DArray = function(matrix, target) {
+var findNumberIn2DArray = function (matrix, target) {
     if (matrix.length == 0) return false;
-    // 从右上角开始搜索，搜索范围为"以pointer为右上，原矩阵左下为左下”的矩阵
-    let row = 0, col = matrix[0].length - 1;
-    while (col >= 0 && row <= matrix.length - 1) {
-        let pointer = matrix[row][col];
-        if (pointer > target) {    // 该列没有比target小的元素，col--
-            col--;
-        } else if (pointer < target) {  // 该行没有比target大的元素，row++
-            row++;
-        } else {
-            return true;
+    // 根据矩阵的性质，从右上角开始搜索，搜索范围为"以（x，y）为右上，原矩阵左下为左下”的矩阵
+    const row = matrix.length,
+        col = matrix[0].length;
+    let x = 0,
+        y = col - 1;
+    while (x < row && y >= 0) {
+        if (matrix[x][y] == target) return true;
+        else if (matrix[x][y] > target) {
+            // 该列没有比target小的元素，y--
+            y--;
+        } else if (matrix[x][y] < target) {
+            // 该行没有比target大的元素，x++
+            x++;
         }
     }
     return false;
 };
 ```
-

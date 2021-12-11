@@ -2,8 +2,6 @@
 
 从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。
 
- 
-
 例如:
 给定二叉树: `[3,9,20,null,null,15,7]`,
 
@@ -24,8 +22,6 @@
   [15,7]
 ]
 ```
-
- 
 
 **提示：**
 
@@ -49,25 +45,20 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function(root) {
-    let res = [];
-    if (!root) return res;
-
-    let queue = [];
-    queue.push(root);
-
-    while (queue.length != 0) {
-        let len = queue.length;
-        res.push([]);
+var levelOrder = function (root) {
+    if (!root) return [];
+    let q = [root];
+    let ans = [];
+    while (q.length != 0) {
+        let len = q.length; // 当层元素数量
+        ans.push([]); // 和剑指 Offer 32 - I. 从上到下打印二叉树的不同
         for (let i = 0; i < len; i++) {
-            let cur = queue.shift();
-            res[res.length - 1].push(cur.val);
-            if (cur.left) queue.push(cur.left);
-            if (cur.right) queue.push(cur.right);
+            let cur = q.shift();
+            ans[ans.length - 1].push(cur.val); // 和剑指 Offer 32 - I. 从上到下打印二叉树的不同
+            if (cur.left) q.push(cur.left);
+            if (cur.right) q.push(cur.right);
         }
     }
-
-    return res;
+    return ans;
 };
 ```
-

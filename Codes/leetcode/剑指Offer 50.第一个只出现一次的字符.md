@@ -12,7 +12,7 @@
 **示例 2:**
 
 ```
-输入：s = "" 
+输入：s = ""
 输出：' '
 ```
 
@@ -31,22 +31,22 @@
  * @param {string} s
  * @return {character}
  */
-var firstUniqChar = function(s) {
+var firstUniqChar = function (s) {
     // js中的map以插入的顺序返回键值
     const map = new Map();
     for (let i = 0; i < s.length; i++) {
         let c = s.charAt(i);
         if (!map.has(c)) {
-            map.set(c, false);
+            map.set(c, false); // false表示出现一次
         } else {
-            map.set(c, true);
+            map.set(c, true); // true表示出现多次
         }
     }
 
     for (let [key, value] of map.entries()) {
+        // 或 let [key, value] of map
         if (value == false) return key;
     }
-    return ' ';
+    return " ";
 };
 ```
-

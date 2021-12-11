@@ -2,8 +2,6 @@
 
 请实现 `copyRandomList` 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 `next` 指针指向下一个节点，还有一个 `random` 指针指向链表中的任意节点或者 `null`。
 
- 
-
 **示例 1：**
 
 ![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e1.png)
@@ -39,15 +37,11 @@
 解释：给定的链表为空（空指针），因此返回 null。
 ```
 
- 
-
 **提示：**
 
-- `-10000 <= Node.val <= 10000`
-- `Node.random` 为空（null）或指向链表中的节点。
-- 节点数目不超过 1000 。
-
- 
+-   `-10000 <= Node.val <= 10000`
+-   `Node.random` 为空（null）或指向链表中的节点。
+-   节点数目不超过 1000 。
 
 **注意：**本题与主站 138 题相同：https://leetcode-cn.com/problems/copy-list-with-random-pointer/
 
@@ -69,27 +63,21 @@
  * @param {Node} head
  * @return {Node}
  */
-var copyRandomList = function(head) {
-    let map = new Map();    // [原结点：待确定random和next的新建结点]
-    let p = head;
-    while (p) {
-        map.set(p, new Node(p.val, null, null));
-        p = p.next;
+var copyRandomList = function (head) {
+    let map = new Map(); // 原结点 => 对应的新结点（未设置next和random）
+    let cur = head;
+    while (cur) {
+        map.set(cur, new Node(cur.val, null, null));
+        cur = cur.next;
     }
 
-    // 生成新结点后再关联next和random
-    p = head;
-    while (p) {
-        let newNode = map.get(p);
-        if (p.next) {
-            newNode.next = map.get(p.next);
-        }
-        if (p.random) {
-            newNode.random = map.get(p.random);
-        }
-        p = p.next;
+    cur = head;
+    while (cur) {
+        let newNode = map.get(cur);
+        if (cur.next) newNode.next = map.get(cur.next); // 注意判断null
+        if (cur.random) newNode.random = map.get(cur.random);
+        cur = cur.next;
     }
     return map.get(head);
 };
 ```
-
