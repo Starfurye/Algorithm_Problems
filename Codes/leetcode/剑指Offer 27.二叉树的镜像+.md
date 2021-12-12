@@ -5,23 +5,22 @@
 例如输入：
 
 ```
-	4  
-	/  \ 
-	2   7 
+	4
+	/  \
+	2   7
 	/ \  / \
 	1  3 6  9
 ```
+
 镜像输出：
 
 ```
-   4  
-   /  \ 
-   7   2 
+   4
+   /  \
+   7   2
    / \  / \
    9  6 3  1
 ```
-
- 
 
 **示例 1：**
 
@@ -29,8 +28,6 @@
 输入：root = [4,2,7,1,3,6,9]
 输出：[4,7,2,9,6,3,1]
 ```
-
- 
 
 **限制：**
 
@@ -56,18 +53,12 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var mirrorTree = function(root) {
-    if (!root) return root;
-    swap(root);
+var mirrorTree = function (root) {
+    if (!root) return null;
+    [root.left, root.right] = [root.right, root.left];
     mirrorTree(root.left);
     mirrorTree(root.right);
     return root;
-};
-
-const swap = (root) => {
-    let temp = root.left;
-    root.left = root.right;
-    root.right = temp;
 };
 ```
 
@@ -85,22 +76,15 @@ const swap = (root) => {
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var mirrorTree = function(root) {
+var mirrorTree = function (root) {
     if (!root) return root;
     let queue = [root];
     while (queue.length != 0) {
         const cur = queue.shift();
-        swap(cur);
+        [cur.left, cur.right] = [cur.right, cur.left];
         if (cur.left) queue.push(cur.left);
         if (cur.right) queue.push(cur.right);
     }
     return root;
 };
-
-const swap = (root) => {
-    let temp = root.left;
-    root.left = root.right;
-    root.right = temp;
-};
 ```
-

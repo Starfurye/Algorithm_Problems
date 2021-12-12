@@ -5,23 +5,22 @@
 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
 
 ```
-1  
-/ \ 
-2  2 
+1
+/ \
+2  2
 / \ / \
 3  4 4  3
 ```
+
 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
 
 ```
-  1  
-  / \ 
-  2  2  
-  \  \  
+  1
+  / \
+  2  2
+  \  \
   3   3
 ```
-
- 
 
 **示例 1：**
 
@@ -36,8 +35,6 @@
 输入：root = [1,2,2,null,3,null,3]
 输出：false
 ```
-
- 
 
 **限制：**
 
@@ -61,18 +58,16 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
-    const recur = (leftT, rightT) => {
-        if (!leftT && !rightT) return true;         // 都为null
-        else if (!leftT ^ !rightT || leftT.val != rightT.val) return false; // 只有一个为null || 值不相等
-        
-        let checkOuter = recur(leftT.left, rightT.right);
-        let checkInner = recur(leftT.right, rightT.left);
-        return checkOuter && checkInner;
-    }
+var isSymmetric = function (root) {
+    const recur = (left, right) => {
+        if (!left && !right) return true;
+        // 只有一个为null || 值不相等
+        else if (!left ^ !right || left.val != right.val) return false;
+
+        return recur(left.left, right.right) && recur(left.right, right.left);
+    };
 
     if (!root) return true;
     return recur(root.left, root.right);
 };
 ```
-
