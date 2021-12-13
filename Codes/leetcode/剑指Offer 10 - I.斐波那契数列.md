@@ -27,7 +27,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 **提示：**
 
-- `0 <= n <= 100`
+-   `0 <= n <= 100`
 
 ## Solution
 
@@ -40,15 +40,16 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
  * @param {number} n
  * @return {number}
  */
-var fib = function(n) {
+var fib = function (n) {
     if (n === 0) return 0;
     else if (n === 1) return 1;
-    
-    let front = 1, back = 0;
+
+    let front = 1,
+        back = 0;
     for (let i = 2; i <= n; i++) {
         [back, front] = [front, back + front];
-        front %= (1e9+7);
-        back %= (1e9+7);
+        front %= 1e9 + 7;
+        back %= 1e9 + 7;
     }
     return front;
 };
@@ -61,17 +62,14 @@ var fib = function(n) {
  * @param {number} n
  * @return {number}
  */
-var fib = function(n) {
-    if (n == 0) return 0;
-    else if (n == 1) return 1;
-
-    let pre = 0, back = 1;
+var fib = function (n) {
+    if (n == 0 || n == 1) return n;
+    let pre = 0,
+        cur = 1;
     for (let i = 2; i <= n; i++) {
-        let temp = pre;
-        pre = back;
-        back = (temp + back) % (1e9 + 7);
+        [pre, cur] = [cur, (pre + cur) % (1e9 + 7)];
     }
-    return back;
+    return cur;
 };
 ```
 
@@ -80,17 +78,23 @@ var fib = function(n) {
 ![image-20210904111318734.png](https://i.loli.net/2021/09/04/sP7Sk5gahuvFOim.png)
 
 ```js
-var fib = function(n) {
+var fib = function (n) {
     if (n < 2) {
         return n;
     }
-    const q = [[1, 1], [1, 0]];
+    const q = [
+        [1, 1],
+        [1, 0],
+    ];
     const res = pow(q, n - 1);
     return res[0][0];
 };
 
 const pow = (a, n) => {
-    let ret = [[1, 0], [0, 1]];
+    let ret = [
+        [1, 0],
+        [0, 1],
+    ];
     while (n > 0) {
         if ((n & 1) === 1) {
             ret = multiply(ret, a);
@@ -99,16 +103,18 @@ const pow = (a, n) => {
         a = multiply(a, a);
     }
     return ret;
-}
+};
 
 const multiply = (a, b) => {
     const c = new Array(2).fill(0).map(() => new Array(2).fill(0));
     for (let i = 0; i < 2; i++) {
         for (let j = 0; j < 2; j++) {
-            c[i][j] = (BigInt(a[i][0]) * BigInt(b[0][j]) + BigInt(a[i][1]) * BigInt(b[1][j])) % BigInt(1000000007);
+            c[i][j] =
+                (BigInt(a[i][0]) * BigInt(b[0][j]) +
+                    BigInt(a[i][1]) * BigInt(b[1][j])) %
+                BigInt(1000000007);
         }
     }
     return c;
-}
+};
 ```
-

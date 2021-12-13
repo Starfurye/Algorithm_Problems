@@ -2,8 +2,6 @@
 
 假设把某股票的价格按照时间先后顺序存储在数组中，请问买卖该股票一次可能获得的最大利润是多少？
 
- 
-
 **示例 1:**
 
 ```
@@ -21,15 +19,11 @@
 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
 ```
 
- 
-
 **限制：**
 
 ```
 0 <= 数组长度 <= 10^5
 ```
-
- 
 
 **注意：**本题与主站 121 题相同：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
 
@@ -37,17 +31,17 @@
 
 ### 动态规划
 
-dp[i]表示从第0天到第i天的最大利润。
+`dp[i]` 表示从第 0 天到第 i 天的最大利润。
 
 ```js
 /**
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+var maxProfit = function (prices) {
     if (prices.length == 0) return 0;
     // dp[i] = max{dp[i - 1], price[i] - min{price[0]...price[i - 1]}}
-    
+
     let dp = new Array(prices.length).fill(0);
     let low = prices[0]; // min{price[0]...price[i - 1]}
 
@@ -60,4 +54,3 @@ var maxProfit = function(prices) {
     return dp[prices.length - 1];
 };
 ```
-

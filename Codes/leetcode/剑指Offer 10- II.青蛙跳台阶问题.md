@@ -1,6 +1,6 @@
 # 剑指 Offer 10- II. 青蛙跳台阶问题
 
-一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 `n` 级的台阶总共有多少种跳法。
+一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级台阶。求该青蛙跳上一个 `n` 级的台阶总共有多少种跳法。
 
 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。
 
@@ -27,7 +27,7 @@
 
 **提示：**
 
-- `0 <= n <= 100`
+-   `0 <= n <= 100`
 
 注意：本题与主站 70 题相同：https://leetcode-cn.com/problems/climbing-stairs/，区别在求0级时本题答案为1。
 
@@ -40,7 +40,7 @@
  * @param {number} n
  * @return {number}
  */
-var numWays = function(n) {
+var numWays = function (n) {
     if (n == 0 || n == 1) return 1;
 
     let dp = new Array(n + 1).fill(0);
@@ -61,16 +61,14 @@ var numWays = function(n) {
  * @param {number} n
  * @return {number}
  */
-var numWays = function(n) {
+var numWays = function (n) {
     if (n == 0 || n == 1) return 1;
-    let pre = 1, back = 2;
-
+    else if (n == 2) return 2;
+    let pre = 1,
+        cur = 2; // 上一层和两层
     for (let i = 3; i <= n; i++) {
-        let temp = pre;
-        pre = back;
-        back = (temp + back) % (1e9 + 7);
+        [pre, cur] = [cur, (pre + cur) % (1e9 + 7)];
     }
-    return back;
+    return cur;
 };
 ```
-
