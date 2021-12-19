@@ -22,12 +22,10 @@
 解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -> 5 -> 9.
 ```
 
- 
-
 **说明：**
 
-- 题目保证链表中节点的值互不相同
-- 若使用 C 或 C++ 语言，你不需要 `free` 或 `delete` 被删除的节点
+-   题目保证链表中节点的值互不相同
+-   若使用 C 或 C++ 语言，你不需要 `free` 或 `delete` 被删除的节点
 
 ## Solution
 
@@ -44,20 +42,15 @@
  * @param {number} val
  * @return {ListNode}
  */
-var deleteNode = function(head, val) {
-    let newhead = new ListNode(0);	// 方便统一操作
-    newhead.next = head;
-
-    let pre = newhead, cur = head;
-    while (cur && cur.val != val) {
-        pre = cur;
-        cur = cur.next;
+var deleteNode = function (head, val) {
+    let psoHead = new ListNode(0);
+    psoHead.next = head;
+    let p = psoHead;
+    while (p.next) {
+        if (p.next.val == val) {
+            p.next = p.next.next;
+        } else p = p.next;
     }
-    if (!cur) return head;	// 找不到val，直接返回原来的链表
-    else {
-        pre.next = cur.next;
-        return newhead.next;
-    }
+    return psoHead.next;
 };
 ```
-

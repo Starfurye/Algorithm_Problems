@@ -1,10 +1,8 @@
-# 剑指 Offer 22. 链表中倒数第k个节点
+# 剑指 Offer 22. 链表中倒数第 k 个节点
 
-输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节点。
+输入一个链表，输出该链表中倒数第 k 个节点。为了符合大多数人的习惯，本题从 1 开始计数，即链表的尾节点是倒数第 1 个节点。
 
 例如，一个链表有 `6` 个节点，从头节点开始，它们的值依次是 `1、2、3、4、5、6`。这个链表的倒数第 `3` 个节点是值为 `4` 的节点。
-
- 
 
 **示例：**
 
@@ -29,16 +27,16 @@
  * @param {number} k
  * @return {ListNode}
  */
-var getKthFromEnd = function(head, k) {
-    let front = head, back = head;
+var getKthFromEnd = function (head, k) {
+    let pre = head,
+        cur = head;
     for (let i = 1; i < k; i++) {
-        front = front.next;
+        cur = cur.next;
     }
-    while (front.next) {
-        front = front.next;
-        back = back.next;
+    while (cur.next) {
+        cur = cur.next;
+        pre = pre.next;
     }
-    return back;
+    return pre;
 };
 ```
-
