@@ -31,9 +31,9 @@
 
 **提示：**
 
-- 树中节点总数在范围 `[0, 5000]` 内
-- `-1000 <= Node.val <= 1000`
-- `-1000 <= targetSum <= 1000`
+-   树中节点总数在范围 `[0, 5000]` 内
+-   `-1000 <= Node.val <= 1000`
+-   `-1000 <= targetSum <= 1000`
 
 注意：本题与主站 113 题相同：https://leetcode-cn.com/problems/path-sum-ii/
 
@@ -55,7 +55,7 @@
  * @param {number} target
  * @return {number[][]}
  */
-var pathSum = function(root, target) {
+var pathSum = function (root, target) {
     const res = [];
 
     const backTrack = (sum, node, path) => {
@@ -84,4 +84,3 @@ var pathSum = function(root, target) {
     return res;
 };
 ```
-

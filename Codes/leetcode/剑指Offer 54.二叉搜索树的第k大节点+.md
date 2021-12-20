@@ -1,8 +1,6 @@
-# 剑指 Offer 54. 二叉搜索树的第k大节点
+# 剑指 Offer 54. 二叉搜索树的第 k 大节点
 
-给定一棵二叉搜索树，请找出其中第k大的节点。
-
- 
+给定一棵二叉搜索树，请找出其中第 k 大的节点。
 
 **示例 1:**
 
@@ -32,7 +30,7 @@
 
 **限制：**
 
-1 ≤ k ≤ 二叉搜索树元素个数
+-   `1 ≤ k ≤ 二叉搜索树元素个数`
 
 ## Solution
 
@@ -49,23 +47,25 @@
  * @param {number} k
  * @return {number}
  */
-var kthLargest = function(root, k) {
-    let count = 0, ans = null;
+var kthLargest = function (root, k) {
     const dfs = (cur) => {
         // 右中左
-        if (!cur || ans != null) return;
-
+        if (!cur) return;
         dfs(cur.right);
-        if (++count === k) {
+
+        count++;
+        if (count == k) {
             ans = cur.val;
             return;
         }
+
         dfs(cur.left);
+    };
 
-    }
-
+    if (!root) return null;
+    let count = 0,
+        ans = null;
     dfs(root);
     return ans;
 };
 ```
-
