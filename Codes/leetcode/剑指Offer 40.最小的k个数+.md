@@ -1,6 +1,6 @@
-# 剑指 Offer 40. 最小的k个数
+# 剑指 Offer 40. 最小的 k 个数
 
-输入整数数组 `arr` ，找出其中最小的 `k` 个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。
+输入整数数组 `arr` ，找出其中最小的 `k` 个数。例如，输入 4、5、1、6、2、7、3、8 这 8 个数字，则最小的 4 个数字是 1、2、3、4。
 
 **示例 1：**
 
@@ -18,8 +18,8 @@
 
 **限制：**
 
-- `0 <= k <= arr.length <= 10000`
-- `0 <= arr[i] <= 10000`
+-   `0 <= k <= arr.length <= 10000`
+-   `0 <= arr[i] <= 10000`
 
 ## Solution
 
@@ -31,11 +31,13 @@
  * @param {number} k
  * @return {number[]}
  */
-var getLeastNumbers = function(arr, k) {
+var getLeastNumbers = function (arr, k) {
     const quickSearch = (l, r) => {
-        let i = l, j = r;
+        let i = l,
+            j = r;
         while (i < j) {
             // pivot = arr[l]
+            // 下面两行不可交换顺序，如果选left做pivot就先走j，如果选right做pivot就先走i
             while (i < j && arr[j] >= arr[l]) j--;
             while (i < j && arr[i] <= arr[l]) i++;
             [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -50,14 +52,10 @@ var getLeastNumbers = function(arr, k) {
         else return arr.slice(0, k);
     };
 
-    if (k > arr.length) return arr;
-    else if (k == 0) return [];
-
+    if (k == 0) return [];
     return quickSearch(0, arr.length - 1);
 };
 ```
-
-
 
 ### API
 
@@ -67,8 +65,7 @@ var getLeastNumbers = function(arr, k) {
  * @param {number} k
  * @return {number[]}
  */
-var getLeastNumbers = function(arr, k) {
+var getLeastNumbers = function (arr, k) {
     return arr.sort((a, b) => a - b).slice(0, k);
 };
 ```
-

@@ -18,12 +18,12 @@
 
 **提示:**
 
-- `0 < nums.length <= 100`
+-   `0 < nums.length <= 100`
 
 **说明:**
 
-- 输出结果可能非常大，所以你需要返回一个字符串而不是整数
-- 拼接起来的数字可能会有前导 0，最后结果不需要去掉前导 0
+-   输出结果可能非常大，所以你需要返回一个字符串而不是整数
+-   拼接起来的数字可能会有前导 0，最后结果不需要去掉前导 0
 
 ## Solution
 
@@ -32,13 +32,12 @@
  * @param {number[]} nums
  * @return {string}
  */
-var minNumber = function(nums) {
+var minNumber = function (nums) {
     nums.sort((a, b) => {
-        // 330 > 303, so "30" is before "3"
-        if (parseInt(a + "" + b) > parseInt(b + "" + a)) return 1;
-        else return -1;
+        if (parseInt(a + "" + b) < parseInt(b + "" + a)) return -1;
+        // 注意排序规则
+        else return 1;
     });
-    return nums.join('');
+    return nums.join("");
 };
 ```
-

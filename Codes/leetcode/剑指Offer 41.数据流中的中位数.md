@@ -10,8 +10,8 @@
 
 设计一个支持以下两种操作的数据结构：
 
-void addNum(int num) - 从数据流中添加一个整数到数据结构中。
-double findMedian() - 返回目前所有元素的中位数。
+`void addNum(int num)` - 从数据流中添加一个整数到数据结构中。
+`double findMedian()` - 返回目前所有元素的中位数。
 
 **示例 1：**
 
@@ -33,7 +33,7 @@ double findMedian() - 返回目前所有元素的中位数。
 
 **限制：**
 
-- 最多会对 `addNum、findMedian` 进行 `50000` 次调用。
+-   最多会对 `addNum、findMedian` 进行 `50000` 次调用。
 
 注意：本题与主站 295 题相同：https://leetcode-cn.com/problems/find-median-from-data-stream/
 
@@ -43,11 +43,13 @@ double findMedian() - 返回目前所有元素的中位数。
 
 ![](https://pic.leetcode-cn.com/25837f1b195e56de20587a4ed97d9571463aa611789e768914638902add351f4-Picture1.png)
 
+A 中的元素个数总是比 B 多一个或和 B 相等。
+
 `addNum(num)` 函数：
 
-当添加第N（偶数）个数时：需向 A 添加一个元素。为了保证两个堆的功能，需要先将新元素 num 插入至 B，再将 B 堆顶元素插入至 A；
+当添加第 N（偶数）个数时：需向 A 添加一个元素。为了保证两个堆的功能，需要先将新元素 num 插入至 B，再将 B 堆顶元素插入至 A；
 
-当添加第N（奇数）个数时：需向 B 添加一个元素。为了保证两个堆的功能，需要先将新元素 num 插入至 A，再将 A 堆顶元素插入至 B；
+当添加第 N（奇数）个数时：需向 B 添加一个元素。为了保证两个堆的功能，需要先将新元素 num 插入至 A，再将 A 堆顶元素插入至 B；
 
 `findMedian()` 函数：
 
@@ -89,4 +91,3 @@ class MedianFinder(object):
 # obj.addNum(num)
 # param_2 = obj.findMedian()
 ```
-
