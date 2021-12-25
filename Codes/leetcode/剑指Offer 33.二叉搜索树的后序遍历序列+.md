@@ -41,7 +41,7 @@ var verifyPostorder = function (postorder) {
     const rec = (i, j) => {
         if (i >= j) return true;
         let p = i;
-        while (postorder[p] < postorder[j]) p++; // 找左子树
+        while (postorder[p] < postorder[j]) p++; // 找左右子树的划分
         let m = p;
         while (postorder[p] > postorder[j]) p++;
         // p == j判断此树是否正确，如果p<j说明右子树右边还有元素，不正确

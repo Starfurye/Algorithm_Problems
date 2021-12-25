@@ -1,6 +1,6 @@
 # 剑指 Offer 55 - II. 平衡二叉树
 
-输入一棵二叉树的根节点，判断该树是不是平衡二叉树。如果某二叉树中任意节点的左右子树的深度相差不超过1，那么它就是一棵平衡二叉树。
+输入一棵二叉树的根节点，判断该树是不是平衡二叉树。如果某二叉树中任意节点的左右子树的深度相差不超过 1，那么它就是一棵平衡二叉树。
 
 **示例 1:**
 
@@ -32,11 +32,9 @@
 
 返回 `false` 。
 
- 
-
 **限制：**
 
-* `0 <= 树的结点个数 <= 10000`
+-   `0 <= 树的结点个数 <= 10000`
 
 注意：本题与主站 110 题相同：https://leetcode-cn.com/problems/balanced-binary-tree/
 
@@ -56,23 +54,21 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isBalanced = function(root) {
-    if (!root) return true;
-    let ans = true;
+var isBalanced = function (root) {
     const DFS = (node) => {
-        if (ans == false) return;
+        if (!ans) return;
         if (!node) return 0;
-
-        let leftD = 1 + DFS(node.left);			// left depth
-        let rightD = 1 + DFS(node.right);		// right depth
+        let leftD = 1 + DFS(node.left);
+        let rightD = 1 + DFS(node.right);
         if (Math.abs(leftD - rightD) > 1) {
             ans = false;
+            return;
         }
         return Math.max(leftD, rightD);
     };
 
+    let ans = true;
     DFS(root);
     return ans;
 };
 ```
-
