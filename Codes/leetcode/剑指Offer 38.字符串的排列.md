@@ -11,15 +11,15 @@
 输出：["abc","acb","bac","bca","cab","cba"]
 ```
 
-
 **限制：**
+
 ```text
 1 <= s 的长度 <= 8
 ```
 
 ## Solution
 
-同lc47-全排列II。
+同 lc47-全排列 II。
 
 ### javascript
 
@@ -28,29 +28,34 @@
  * @param {string} s
  * @return {string[]}
  */
-var permutation = function(s) {
-    let res = [], temp = [];
-    let arr = s.split('');
-    let visited = new Array(arr.length).fill(0);
-    var backtrack = () => {
-        if (temp.length === arr.length) {
-            res.push([...temp].join(''));
+var permutation = function (s) {
+    const backtrack = () => {
+        if (temp.length == arr.length) {
+            ans.push([...temp].join(""));
             return;
         }
         for (let i = 0; i < arr.length; i++) {
             // 剪枝，当前元素和前一个元素相同且前一个元素未访问过则为重复元素
-            if (i > 0 && arr[i] === arr[i - 1] && visited[i - 1] === 0) continue;
-            if (visited[i] === 1) continue;
+            if (i > 0 && arr[i] == arr[i - 1] && visited[i - 1] == 0) continue;
+            if (visited[i] == 1) continue;
+
             visited[i] = 1;
             temp.push(arr[i]);
+
             backtrack();
+
             temp.pop();
             visited[i] = 0;
         }
     };
+
+    let ans = [],
+        temp = [];
+    let arr = s.split("");
+    let visited = new Array(arr.length).fill(0);
     arr.sort();
     backtrack();
-    return res;
+    return ans;
 };
 ```
 
@@ -81,9 +86,8 @@ class Solution {
             temp.append(chars[i]);
             backtrack(chars, index + 1);
             visited[i] = 0;
-            temp.deleteCharAt(index);          
+            temp.deleteCharAt(index);
         }
     }
 }
 ```
-
