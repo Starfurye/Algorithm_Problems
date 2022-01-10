@@ -21,6 +21,8 @@
 -   `1 <= nums.length <= 10000`
 -   `1 <= nums[i] < 2^31`
 
+注意：本题与主站 137 题相同：https://leetcode-cn.com/problems/single-number-ii/
+
 ## Solution
 
 从二进制位角度看，第 i 位的 1 的总数 `count[i] = 3 * k + m`，当要求的数该位为 1 时，m 为 1。最后对所有位对 3 取模即可。
