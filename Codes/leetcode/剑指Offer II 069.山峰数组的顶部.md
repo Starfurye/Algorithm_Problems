@@ -2,30 +2,14 @@
 
 符合下列属性的数组 `arr` 称为 **山峰数组**（**山脉数组）** ：
 
-- `arr.length >= 3`
+-   `arr.length >= 3`
 
-- 存在
+-   存在 `i`（`0 < i < arr.length - 1`）使得：
 
-     
-
-    ```
-    i
-    ```
-
-    （
-
-    ```
-    0 < i < arr.length - 1
-    ```
-
-    ）使得：
-
-    - `arr[0] < arr[1] < ... arr[i-1] < arr[i]`
-    - `arr[i] > arr[i+1] > ... > arr[arr.length - 1]`
+    -   `arr[0] < arr[1] < ... arr[i-1] < arr[i]`
+    -   `arr[i] > arr[i+1] > ... > arr[arr.length - 1]`
 
 给定由整数组成的山峰数组 `arr` ，返回任何满足 `arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]` 的下标 `i` ，即山峰顶部。
-
- 
 
 **示例 1：**
 
@@ -62,19 +46,13 @@
 输出：2
 ```
 
- 
-
 **提示：**
 
-- `3 <= arr.length <= 10^4`
-- `0 <= arr[i] <= 10^6`
-- 题目数据保证 `arr` 是一个山脉数组
+-   `3 <= arr.length <= 10^4`
+-   `0 <= arr[i] <= 10^6`
+-   题目数据保证 `arr` 是一个山脉数组
 
- 
-
-**进阶：**很容易想到时间复杂度 `O(n)` 的解决方案，你可以设计一个 `O(log(n))` 的解决方案吗？
-
- 
+**进阶：** 很容易想到时间复杂度 `O(n)` 的解决方案，你可以设计一个 `O(log(n))` 的解决方案吗？
 
 注意：本题与主站 852 题相同：https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/
 
@@ -85,8 +63,9 @@
  * @param {number[]} arr
  * @return {number}
  */
-var peakIndexInMountainArray = function(arr) {
-    let left = 0, right = arr.length - 1;
+var peakIndexInMountainArray = function (arr) {
+    let left = 0,
+        right = arr.length - 1;
     while (left <= right) {
         let mid = Math.floor((right - left) / 2) + left;
         if (arr[mid] < arr[mid + 1]) {
@@ -98,4 +77,3 @@ var peakIndexInMountainArray = function(arr) {
     return left;
 };
 ```
-
