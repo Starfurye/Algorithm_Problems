@@ -38,14 +38,14 @@
  * @return {boolean}
  */
 var verifyPostorder = function (postorder) {
-    const rec = (i, j) => {
-        if (i >= j) return true;
-        let p = i;
-        while (postorder[p] < postorder[j]) p++; // 找左右子树的划分
+    const rec = (left, right) => {
+        if (left >= right) return true;
+        let p = left;
+        while (postorder[p] < postorder[right]) p++; // 找左右子树的划分
         let m = p;
-        while (postorder[p] > postorder[j]) p++;
-        // p == j判断此树是否正确，如果p<j说明右子树右边还有元素，不正确
-        return p == j && rec(i, m - 1) && rec(m, j - 1);
+        while (postorder[p] > postorder[right]) p++;
+        // p == right判断此树是否正确，如果p<right说明右子树右边还有元素，不正确
+        return p == right && rec(left, m - 1) && rec(m, right - 1);
     };
     return rec(0, postorder.length - 1);
 };

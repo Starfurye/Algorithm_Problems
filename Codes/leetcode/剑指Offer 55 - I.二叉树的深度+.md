@@ -16,11 +16,9 @@
 
 返回它的最大深度 3 。
 
- 
-
 **提示：**
 
-- 节点总数 <= 10000
+-   节点总数 <= 10000
 
 注意：本题与主站 104 题相同：https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
 
@@ -31,28 +29,28 @@
 ```js
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
  * }
  */
 /**
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-    if (!root) return 0;
-
-    const dfs = (node, d) => {
+var maxDepth = function (root) {
+    const dfs = (node, depth) => {
         if (!node.left && !node.right) {
-            ans = Math.max(d, ans);
+            ans = Math.max(ans, depth);
             return;
         }
-        if (node.left) dfs(node.left, d + 1);
-        if (node.right) dfs(node.right, d + 1);
+        node.left && dfs(node.left, depth + 1);
+        node.right && dfs(node.right, depth + 1);
     };
-    
+
     let ans = 1;
+    if (root === null) return 0;
     dfs(root, 1);
     return ans;
 };
@@ -63,31 +61,29 @@ var maxDepth = function(root) {
 ```js
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
  * }
  */
 /**
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-    if (!root) return 0;
+var maxDepth = function (root) {
+    if (root === null) return 0;
     let ans = 0;
-
-    let queue = [root];
-    while (queue.length) {
+    let q = [root];
+    while (q.length !== 0) {
         ans++;
-        let len = queue.length;
+        let len = q.length;
         for (let i = 0; i < len; i++) {
-            let cur = queue.shift();
-            if (cur.left) queue.push(cur.left);
-            if (cur.right) queue.push(cur.right);
+            let top = q.shift();
+            top.left && q.push(top.left);
+            top.right && q.push(top.right);
         }
     }
-
     return ans;
 };
 ```
-
