@@ -1,4 +1,4 @@
-# 412. Fizz Buzz
+# LC-0412. Fizz Buzz
 
 Given an integer `n`, return _a string array_ `answer` (**1-indexed**) _where_:
 

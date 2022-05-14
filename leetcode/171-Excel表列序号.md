@@ -1,4 +1,4 @@
-# 171. Excel Sheet Column Number
+# LC-0LC-0171. Excel Sheet Column Number
 
 Given a string `columnTitle` that represents the column title as appear in an Excel sheet, return _its corresponding column number_.
 

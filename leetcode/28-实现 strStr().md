@@ -1,4 +1,4 @@
-# 28. Implement strStr()
+# LC-0028. Implement strStr()
 
 Implement [strStr()](http://www.cplusplus.com/reference/cstring/strstr/).
 

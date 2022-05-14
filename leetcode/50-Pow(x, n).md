@@ -1,4 +1,4 @@
-# 50. Pow(x, n)
+# LC-0050. Pow(x, n)
 
 Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which calculates `x` raised to the power `n` (i.e., `xn`).
 
