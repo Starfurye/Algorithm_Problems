@@ -19,7 +19,7 @@
 
 ### 栈
 
-```js
+```javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -31,7 +31,7 @@
  * @param {ListNode} head
  * @return {number[]}
  */
-var reversePrint = function(head) {
+var reversePrint = function (head) {
     let stack = [];
     let p = head;
     while (p) {
@@ -42,11 +42,9 @@ var reversePrint = function(head) {
 };
 ```
 
-
-
 ### 反转链表
 
-```js
+```javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -58,15 +56,16 @@ var reversePrint = function(head) {
  * @param {ListNode} head
  * @return {number[]}
  */
-var reversePrint = function(head) {
-    let pre = null, cur = head;
+var reversePrint = function (head) {
+    let pre = null,
+        cur = head;
     while (cur) {
         let temp = cur.next;
         cur.next = pre;
         pre = cur;
         cur = temp;
     }
-    
+
     const ans = [];
     while (pre) {
         ans.push(pre.val);
@@ -75,4 +74,3 @@ var reversePrint = function(head) {
     return ans;
 };
 ```
-

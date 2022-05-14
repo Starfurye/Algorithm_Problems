@@ -25,7 +25,7 @@ minStack.min();   --> 返回 -2.
 
 ### 辅助栈
 
-```js
+```javascript
 /**
  * initialize your data structure here.
  */

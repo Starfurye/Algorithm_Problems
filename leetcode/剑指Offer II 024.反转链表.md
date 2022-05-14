@@ -38,7 +38,7 @@
 
 ## Solution
 
-```js
+```javascript
 let pre = null,
     cur = head;
 while (cur) {

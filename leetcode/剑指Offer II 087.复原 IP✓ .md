@@ -52,7 +52,7 @@
 
 ### 回溯
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {string[]}

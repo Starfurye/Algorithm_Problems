@@ -45,7 +45,7 @@
 
 ### 滑动窗口
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {number}

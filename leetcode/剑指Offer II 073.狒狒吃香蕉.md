@@ -41,7 +41,7 @@
 
 ### 二分法
 
-```js
+```javascript
 /**
  * @param {number[]} piles
  * @param {number} h

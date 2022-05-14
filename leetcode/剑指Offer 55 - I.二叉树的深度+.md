@@ -26,7 +26,7 @@
 
 ### DFS
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -58,7 +58,7 @@ var maxDepth = function (root) {
 
 ### BFS
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

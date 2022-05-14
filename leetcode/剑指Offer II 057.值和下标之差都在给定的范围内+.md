@@ -36,7 +36,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} k

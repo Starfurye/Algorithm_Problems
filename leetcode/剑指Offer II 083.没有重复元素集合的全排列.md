@@ -35,7 +35,7 @@
 
 ### 回溯
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number[][]}

@@ -33,7 +33,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {boolean}

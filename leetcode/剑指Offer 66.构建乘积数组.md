@@ -18,7 +18,7 @@
 
 计算矩阵即可：![](https://pic.leetcode-cn.com/1624619180-vpyyqh-Picture1.png)
 
-```js
+```javascript
 /**
  * @param {number[]} a
  * @return {number[]}

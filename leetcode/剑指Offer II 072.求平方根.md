@@ -31,7 +31,7 @@
 
 ### 二分法
 
-```js
+```javascript
 /**
  * @param {number} x
  * @return {number}

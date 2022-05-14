@@ -26,7 +26,7 @@
 
 ### 哈希表
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {character}

@@ -33,7 +33,7 @@
 -   没有在 `arr2` 出现的按大小排序；
 -   出现在 `arr2` 中的元素要排在没出现在 `arr2` 中的元素之前（可以认为前者比后者小）。
 
-```js
+```javascript
 /**
  * @param {number[]} arr1
  * @param {number[]} arr2

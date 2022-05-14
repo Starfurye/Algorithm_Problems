@@ -41,7 +41,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number[][]} matrix
  */

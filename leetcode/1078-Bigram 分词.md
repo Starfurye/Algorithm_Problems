@@ -28,7 +28,7 @@ Constraints:
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} text
  * @param {string} first

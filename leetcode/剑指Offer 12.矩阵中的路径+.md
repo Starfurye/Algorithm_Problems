@@ -34,7 +34,7 @@
 
 ### 回溯
 
-```js
+```javascript
 /**
  * @param {character[][]} board
  * @param {string} word
@@ -80,7 +80,7 @@ var exist = function (board, word) {
 
 ### DFS
 
-```js
+```javascript
 /**
  * @param {character[][]} board
  * @param {string} word

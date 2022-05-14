@@ -42,7 +42,7 @@
     i>>  left>>                 <<right
 ```
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number[][]}

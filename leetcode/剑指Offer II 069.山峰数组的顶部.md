@@ -58,7 +58,7 @@
 
 ## 二分法
 
-```js
+```javascript
 /**
  * @param {number[]} arr
  * @return {number}

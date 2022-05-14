@@ -42,7 +42,7 @@
 
 ### 滑动窗口
 
-```js
+```javascript
 /**
  * @param {number} target
  * @param {number[]} nums

@@ -31,7 +31,7 @@
 
 注意第 `k` 个数的索引 `k - 1`。
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} k

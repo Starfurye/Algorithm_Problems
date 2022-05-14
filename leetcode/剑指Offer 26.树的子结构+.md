@@ -47,7 +47,7 @@ B 是 A 的子结构， 即 A 中有出现和 B 相同的结构和节点值。
 
 ### 先序遍历+判断
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {

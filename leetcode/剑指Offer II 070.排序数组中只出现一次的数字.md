@@ -29,7 +29,7 @@
 
 ### 位运算
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}

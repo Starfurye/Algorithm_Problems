@@ -54,7 +54,7 @@
 
 向下走 `m - 1` 次，向右走 `n - 1` 次，有 `C(m + n - 2, m - 1) = C(m + n - 2, n - 1)` 种可能。
 
-```js
+```javascript
 /**
  * @param {number} m
  * @param {number} n
@@ -71,7 +71,7 @@ var uniquePaths = function (m, n) {
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number} m
  * @param {number} n
@@ -92,7 +92,7 @@ var uniquePaths = function (m, n) {
 
 滚动数组优化空间：
 
-```js
+```javascript
 /**
  * @param {number} m
  * @param {number} n

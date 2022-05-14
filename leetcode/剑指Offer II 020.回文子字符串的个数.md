@@ -43,7 +43,7 @@
 |       偶       |       2       |           3           |
 |       奇       |       3       |           3           |
 
-```js
+```javascript
 var countSubstrings = function (s) {
     const n = s.length;
     let ans = 0;

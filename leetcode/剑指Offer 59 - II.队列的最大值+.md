@@ -33,7 +33,7 @@
 
 使用一个双端队列 `deque`，在每次入队时，如果 `deque` 队尾元素小于即将入队的元素 `value`，则将小于 `value` 的元素全部出队后，再将 `value` 入队；否则直接入队。
 
-```js
+```javascript
 var MaxQueue = function () {
     this.q = [];
     this.maxq = [];

@@ -52,7 +52,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number[]} candidates
  * @param {number} target

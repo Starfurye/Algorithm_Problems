@@ -25,7 +25,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string[]} timePoints
  * @return {number}

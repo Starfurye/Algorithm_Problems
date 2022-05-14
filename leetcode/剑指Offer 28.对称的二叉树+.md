@@ -46,7 +46,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {

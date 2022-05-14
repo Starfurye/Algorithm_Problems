@@ -43,7 +43,7 @@ L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
 
 交换等同于将链表[后半段](https://leetcode-cn.com/problems/middle-of-the-linked-list/)[反转](https://leetcode-cn.com/problems/reverse-linked-list/)，然后和前半段做合并。
 
-```js
+```javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

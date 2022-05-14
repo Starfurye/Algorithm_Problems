@@ -18,7 +18,7 @@
 
 无进位和与异或运算规律相同，进位和与运算规律相同（并需左移一位）。
 
-```js
+```javascript
 /**
  * @param {number} a
  * @param {number} b

@@ -33,7 +33,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[]} cost
  * @return {number}

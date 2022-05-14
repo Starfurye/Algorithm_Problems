@@ -30,7 +30,7 @@
 
 后一个区间的左边界小于结果中最后一个区间的右边界时，更新最后一个区间的右边界或将这个区间加入结果。
 
-```js
+```javascript
 /**
  * @param {number[][]} intervals
  * @return {number[][]}

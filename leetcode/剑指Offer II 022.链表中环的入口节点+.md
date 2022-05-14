@@ -50,7 +50,7 @@
 
 ### 快慢指针
 
-```js
+```javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {

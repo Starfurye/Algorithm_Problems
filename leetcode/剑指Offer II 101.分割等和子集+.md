@@ -31,7 +31,7 @@
 
 `dp[i][j]`： 背包容量为 `j`，从 `nums[0..i]` 里选元素的最大和。
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {boolean}

@@ -25,7 +25,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number[][]} matrix
  * @return {number[]}

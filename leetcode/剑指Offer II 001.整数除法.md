@@ -46,7 +46,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number} a
  * @param {number} b

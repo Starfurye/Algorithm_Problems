@@ -57,7 +57,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string[]} dictionary
  * @param {string} sentence

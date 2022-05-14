@@ -44,7 +44,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {string} s1
  * @param {string} s2

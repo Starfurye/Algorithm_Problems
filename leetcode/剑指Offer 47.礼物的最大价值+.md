@@ -24,7 +24,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[][]} grid
  * @return {number}
@@ -53,7 +53,7 @@ var maxValue = function (grid) {
 
 #### 滚动数组
 
-```js
+```javascript
 /**
  * @param {number[][]} grid
  * @return {number}

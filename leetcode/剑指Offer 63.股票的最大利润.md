@@ -33,7 +33,7 @@
 
 `dp[i]` 表示从第 0 天到第 i 天的最大利润。
 
-```js
+```javascript
 /**
  * @param {number[]} prices
  * @return {number}

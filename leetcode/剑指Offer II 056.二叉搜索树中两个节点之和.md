@@ -31,7 +31,7 @@
 
 ### BST 性质+双指针
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

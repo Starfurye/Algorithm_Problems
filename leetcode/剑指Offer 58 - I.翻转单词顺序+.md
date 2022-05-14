@@ -39,7 +39,7 @@
 
 逆序遍历，找到单词的左右边界并将其放入数组，最后拼接。
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {string}
@@ -63,7 +63,7 @@ var reverseWords = function (s) {
 
 ### API
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {string}

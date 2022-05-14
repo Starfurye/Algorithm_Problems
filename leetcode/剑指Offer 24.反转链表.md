@@ -19,7 +19,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -31,8 +31,9 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function(head) {
-    let pre = null, cur = head;
+var reverseList = function (head) {
+    let pre = null,
+        cur = head;
     while (cur) {
         let temp = cur.next;
         cur.next = pre;
@@ -60,4 +61,3 @@ class Solution:
             cur = temp
         return pre
 ```
-

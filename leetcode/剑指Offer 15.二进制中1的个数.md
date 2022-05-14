@@ -41,7 +41,7 @@
 
 注意由于 n 的最高位为符号位，不要让 n 移位来判断。
 
-```js
+```javascript
 /**
  * @param {number} n - a positive integer
  * @return {number}
@@ -57,7 +57,7 @@ var hammingWeight = function (n) {
 
 ### 库函数
 
-```js
+```javascript
 /**
  * @param {number} n - a positive integer
  * @return {number}

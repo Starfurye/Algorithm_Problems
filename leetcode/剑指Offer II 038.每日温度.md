@@ -34,7 +34,7 @@
 
 ### 栈
 
-```js
+```javascript
 /**
  * @param {number[]} temperatures
  * @return {number[]}

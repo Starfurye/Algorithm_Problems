@@ -2,7 +2,7 @@
 
 ## javascript
 
-```js
+```javascript
 function buildNext() {
     next.push(0);
     let i = 1,

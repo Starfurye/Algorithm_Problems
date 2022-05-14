@@ -32,7 +32,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number[]} postorder
  * @return {boolean}

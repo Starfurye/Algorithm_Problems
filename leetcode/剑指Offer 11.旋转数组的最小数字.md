@@ -20,7 +20,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number[]} numbers
  * @return {number}

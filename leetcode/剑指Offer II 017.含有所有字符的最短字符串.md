@@ -40,7 +40,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} s
  * @param {string} t

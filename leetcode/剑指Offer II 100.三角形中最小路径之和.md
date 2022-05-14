@@ -41,7 +41,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[][]} triangle
  * @return {number}

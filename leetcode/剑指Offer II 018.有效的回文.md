@@ -29,7 +29,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {boolean}
@@ -49,7 +49,7 @@ var isPalindrome = function (s) {
 
 ### 库函数
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {boolean}

@@ -41,7 +41,7 @@
 
 ### 哈希表
 
-```js
+```javascript
 /**
  * @param {string[]} words
  * @param {string} order

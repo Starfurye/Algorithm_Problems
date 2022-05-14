@@ -1,6 +1,6 @@
 # 168. Excel Sheet Column Title
 
-Given an integer `columnNumber`, return *its corresponding column title as it appears in an Excel sheet*.
+Given an integer `columnNumber`, return _its corresponding column title as it appears in an Excel sheet_.
 
 For example:
 
@@ -11,7 +11,7 @@ C -> 3
 ...
 Z -> 26
 AA -> 27
-AB -> 28 
+AB -> 28
 ...
 ```
 
@@ -43,27 +43,24 @@ Input: columnNumber = 2147483647
 Output: "FXSHRXW"
 ```
 
- 
-
 **Constraints:**
 
-- `1 <= columnNumber <= 2^31 - 1`
+-   `1 <= columnNumber <= 2^31 - 1`
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number} columnNumber
  * @return {string}
  */
-var convertToTitle = function(columnNumber) {
+var convertToTitle = function (columnNumber) {
     let ans = [];
     while (columnNumber > 0) {
-        const temp = (columnNumber - 1) % 26 + 1;
-        ans.push(String.fromCharCode(temp - 1 + 'A'.charCodeAt()));
-        columnNumber = Math.floor((columnNumber - temp) / 26);	// *
+        const temp = ((columnNumber - 1) % 26) + 1;
+        ans.push(String.fromCharCode(temp - 1 + "A".charCodeAt()));
+        columnNumber = Math.floor((columnNumber - temp) / 26); // *
     }
-    return ans.reverse().join('');
+    return ans.reverse().join("");
 };
 ```
-

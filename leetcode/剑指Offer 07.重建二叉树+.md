@@ -30,7 +30,7 @@ Output: [-1]
 
 ## Solution
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -43,10 +43,10 @@ Output: [-1]
  * @param {number[]} inorder
  * @return {TreeNode}
  */
-var buildTree = function(preorder, inorder) {
+var buildTree = function (preorder, inorder) {
     const build = (preorder, preBegin, preEnd, inorder, inBegin, inEnd) => {
         if (preBegin == preEnd) return null;
-        
+
         // 先序的第一个元素为根结点元素
         let rootValue = preorder[preBegin];
         let root = new TreeNode(rootValue);
@@ -55,21 +55,23 @@ var buildTree = function(preorder, inorder) {
         // 找先序第一个元素在中序数组中的位置作为分割点
         let delim = inorder.indexOf(rootValue);
 
-        root.left = build(preorder, 
-                        preBegin + 1, 
-                        preBegin + 1 + (delim - inBegin),
-                        inorder,
-                        inBegin,
-                        delim
-                        );
+        root.left = build(
+            preorder,
+            preBegin + 1,
+            preBegin + 1 + (delim - inBegin),
+            inorder,
+            inBegin,
+            delim
+        );
 
-        root.right = build(preorder,
-                        preBegin + 1 + (delim - inBegin),
-                        preEnd,
-                        inorder,
-                        delim + 1,
-                        inEnd
-                        );
+        root.right = build(
+            preorder,
+            preBegin + 1 + (delim - inBegin),
+            preEnd,
+            inorder,
+            delim + 1,
+            inEnd
+        );
         return root;
     };
 
@@ -77,4 +79,3 @@ var buildTree = function(preorder, inorder) {
     return build(preorder, 0, preorder.length, inorder, 0, inorder.length); // 左闭右开
 };
 ```
-

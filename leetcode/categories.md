@@ -16,9 +16,9 @@
 | 真假问题     |                                              |
 | 最大最小问题 | 474-一和零                                   |
 
-如果求组合数就是外层for循环遍历物品，内层for遍历背包。
+如果求组合数就是外层 for 循环遍历物品，内层 for 遍历背包。
 
-如果求排列数就是外层for遍历背包，内层for循环遍历物品。
+如果求排列数就是外层 for 遍历背包，内层 for 循环遍历物品。
 
 reference: https://leetcode-cn.com/problems/combination-sum-iv/solution/xi-wang-yong-yi-chong-gui-lu-gao-ding-bei-bao-wen-/
 
@@ -52,13 +52,13 @@ int binarySearch(int[] nums, int target) {
 
 ```java
 int binarySearch(int[] nums, int target) {
-    int left = 0; 
+    int left = 0;
     int right = nums.length - 1; // 注意
 
     while(left <= right) {
         int mid = left + (right - left) / 2;
         if(nums[mid] == target)
-            return mid; 
+            return mid;
         else if (nums[mid] < target)
             left = mid + 1; // 注意
         else if (nums[mid] > target)
@@ -77,14 +77,14 @@ int binarySearch(int[] nums, int target) {
 */
 ```
 
- ### 找左侧边界
+### 找左侧边界
 
 ```java
 int left_bound(int[] nums, int target) {
     if (nums.length == 0) return -1;
     int left = 0;
     int right = nums.length; // 注意
-    
+
     while (left < right) { // 注意
         int mid = left + (right - left) / 2;
         if (nums[mid] == target) {
@@ -109,11 +109,11 @@ int left_bound(int[] nums, int target) {
 */
 ```
 
-注意`left = mid + 1`和`right = mid`是由于`right = nums.length`，为左闭右开区间，比完mid后要去掉。
+注意`left = mid + 1`和`right = mid`是由于`right = nums.length`，为左闭右开区间，比完 mid 后要去掉。
 
 [另一种判断](./1482-制作 m 束花所需的最少天数)：
 
-```js
+```javascript
 ...
 let left = m * k - 1;
 let right = len;                    // 左闭右开
@@ -131,15 +131,13 @@ while (left < right) {
 
 1482-制作 m 束花所需的最少天数
 
-
-
 ### 找右侧边界
 
 ```java
 int right_bound(int[] nums, int target) {
     if (nums.length == 0) return -1;
     int left = 0, right = nums.length;
-    
+
     while (left < right) {
         int mid = left + (right - left) / 2;
         if (nums[mid] == target) {
@@ -167,7 +165,7 @@ int right_bound(int[] nums, int target) {
 */
 ```
 
-33-搜索旋转排序数组、34-在排序数组中查找元素的第一个和最后一个位置、35-搜索插入位置、69-x 的平方根、81-搜索旋转排序数组II、153-寻找旋转排序数组中的最小值、275. H 指数 II、287-寻找重复数、633-平方数之和、704-二分查找、852. 山脉数组的峰顶索引、1095-山脉数组中查找目标值、1011-在 D 天内送达包裹的能力、875-爱吃香蕉的珂珂、1300. 转变数组后最接近目标值的数组和
+33-搜索旋转排序数组、34-在排序数组中查找元素的第一个和最后一个位置、35-搜索插入位置、69-x 的平方根、81-搜索旋转排序数组 II、153-寻找旋转排序数组中的最小值、275. H 指数 II、287-寻找重复数、633-平方数之和、704-二分查找、852. 山脉数组的峰顶索引、1095-山脉数组中查找目标值、1011-在 D 天内送达包裹的能力、875-爱吃香蕉的珂珂、1300. 转变数组后最接近目标值的数组和
 
 ## HA-哈希表
 
@@ -193,11 +191,11 @@ void backtracking(参数) {
 }
 ```
 
-| 类型       | 题目                                                         |
-| ---------- | ------------------------------------------------------------ |
-| 子集、组合 | 17-电话号码的字母组合、39-组合总和、40-组合总和II、494-目标和、77-组合、78-子集、90-子集II、216-组合总和 III |
-| 全排列     | 46-全排列、47-全排列II、剑指 Offer 38. 字符串的排列、784-字母大小写全排列 |
-| **搜索**   | 37-解数独、79-单词搜索、131-分割回文串                       |
+| 类型       | 题目                                                                                                           |
+| ---------- | -------------------------------------------------------------------------------------------------------------- |
+| 子集、组合 | 17-电话号码的字母组合、39-组合总和、40-组合总和 II、494-目标和、77-组合、78-子集、90-子集 II、216-组合总和 III |
+| 全排列     | 46-全排列、47-全排列 II、剑指 Offer 38. 字符串的排列、784-字母大小写全排列                                     |
+| **搜索**   | 37-解数独、79-单词搜索、131-分割回文串                                                                         |
 
 ## P-偏移量数组
 
@@ -213,7 +211,7 @@ void backtracking(参数) {
 
 ### 快慢指针
 
-26-删除有序数组中的重复项、27-移除元素、141-环形链表（Floyd判圈法）、142. 环形链表 II
+26-删除有序数组中的重复项、27-移除元素、141-环形链表（Floyd 判圈法）、142. 环形链表 II
 
 ## TA-贪心
 
@@ -221,11 +219,11 @@ void backtracking(参数) {
 
 ## TO-桶排序
 
-347-前 K 个高频元素、692-前K个高频单词
+347-前 K 个高频元素、692-前 K 个高频单词
 
 ## ZH-栈模拟
 
-150-逆波兰表达式求值、224-基本计算器、225-基本计算器II、1006-笨阶乘
+150-逆波兰表达式求值、224-基本计算器、225-基本计算器 II、1006-笨阶乘
 
 ## ZI-字符串匹配
 

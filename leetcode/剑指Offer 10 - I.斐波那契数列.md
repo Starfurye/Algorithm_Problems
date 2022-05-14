@@ -35,7 +35,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 #### v1
 
-```js
+```javascript
 /**
  * @param {number} n
  * @return {number}
@@ -57,7 +57,7 @@ var fib = function (n) {
 
 #### v2
 
-```js
+```javascript
 /**
  * @param {number} n
  * @return {number}
@@ -77,7 +77,7 @@ var fib = function (n) {
 
 ![image-20210904111318734.png](https://i.loli.net/2021/09/04/sP7Sk5gahuvFOim.png)
 
-```js
+```javascript
 var fib = function (n) {
     if (n < 2) {
         return n;

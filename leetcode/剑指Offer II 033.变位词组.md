@@ -39,7 +39,7 @@
 
 排序后的串作为键：
 
-```js
+```javascript
 /**
  * @param {string[]} strs
  * @return {string[][]}
@@ -58,7 +58,7 @@ var groupAnagrams = function (strs) {
 
 按字母计数的结果作为键：
 
-```js
+```javascript
 var groupAnagrams = function (strs) {
     const map = new Object();
     for (let s of strs) {

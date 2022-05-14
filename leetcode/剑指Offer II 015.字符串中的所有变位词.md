@@ -34,7 +34,7 @@
 
 ## Solution
 
-```js
+```javascript
 const A_CODE = "a".charCodeAt(0);
 /**
  * @param {string} s

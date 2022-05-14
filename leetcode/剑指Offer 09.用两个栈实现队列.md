@@ -27,7 +27,7 @@
 
 ## Solution
 
-```js
+```javascript
 var CQueue = function () {
     this.outStack = [];
     this.inStack = [];

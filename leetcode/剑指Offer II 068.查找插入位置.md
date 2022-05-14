@@ -52,7 +52,7 @@
 
 ### 二分法
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} target

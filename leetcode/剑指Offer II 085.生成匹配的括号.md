@@ -26,7 +26,7 @@
 
 ### 回溯
 
-```js
+```javascript
 /**
  * @param {number} n
  * @return {string[]}

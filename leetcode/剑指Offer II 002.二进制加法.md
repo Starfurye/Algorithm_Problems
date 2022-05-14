@@ -28,7 +28,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} a
  * @param {string} b

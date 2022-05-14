@@ -26,7 +26,7 @@
 
 ### 顺序查找
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
@@ -41,7 +41,7 @@ var missingNumber = function (nums) {
 
 ### 异或
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
@@ -58,7 +58,7 @@ var missingNumber = function (nums) {
 
 由于递增，可以使用二分法。
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}

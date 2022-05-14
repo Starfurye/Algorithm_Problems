@@ -38,7 +38,7 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002]，范围是 [2,300
 
 ### 队列
 
-```js
+```javascript
 var RecentCounter = function () {
     this.queue = [];
 };

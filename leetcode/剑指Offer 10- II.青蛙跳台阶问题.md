@@ -35,7 +35,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number} n
  * @return {number}
@@ -56,7 +56,7 @@ var numWays = function (n) {
 
 使用两个空间：
 
-```js
+```javascript
 /**
  * @param {number} n
  * @return {number}

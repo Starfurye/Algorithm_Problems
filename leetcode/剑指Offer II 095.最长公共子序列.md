@@ -43,7 +43,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {string} text1
  * @param {string} text2

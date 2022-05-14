@@ -2,9 +2,9 @@
 
 输入一个整型数组，数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。
 
-要求时间复杂度为O(n)。
+要求时间复杂度为 O(n)。
 
-**示例1:**
+**示例 1:**
 
 ```
 输入: nums = [-2,1,-3,4,-1,2,1,-5,4]
@@ -14,19 +14,19 @@
 
 **提示：**
 
-- `1 <= arr.length <= 10^5`
-- `-100 <= arr[i] <= 100`
+-   `1 <= arr.length <= 10^5`
+-   `-100 <= arr[i] <= 100`
 
 ## Solution
 
 ### 贪心+滑动窗口
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
+var maxSubArray = function (nums) {
     let ans = nums[0];
     let sum = 0;
     for (let num of nums) {
@@ -41,12 +41,12 @@ var maxSubArray = function(nums) {
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
+var maxSubArray = function (nums) {
     let dp = new Array(nums.length).fill(0);
     dp[0] = nums[0];
     let ans = nums[0];
@@ -61,12 +61,12 @@ var maxSubArray = function(nums) {
 
 #### 滚动数组
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
+var maxSubArray = function (nums) {
     let pre = nums[0];
     let ans = nums[0];
     for (let i = 1; i < nums.length; i++) {
@@ -77,4 +77,3 @@ var maxSubArray = function(nums) {
     return ans;
 };
 ```
-

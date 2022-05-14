@@ -39,7 +39,7 @@ randomSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom 总�
 
 ## Solution
 
-```js
+```javascript
 /**
  * Initialize your data structure here.
  */

@@ -36,7 +36,7 @@ trie.search("app");     // return True
 
 ## Solution
 
-```js
+```javascript
 /**
  * Initialize your data structure here.
  */

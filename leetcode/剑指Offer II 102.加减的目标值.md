@@ -42,7 +42,7 @@
 
 目标和为 `(sum - target) / 2`。
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} target

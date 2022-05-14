@@ -41,7 +41,7 @@
 
 由于不能同时偷窃第一个和最后一个房屋，因此可以将这两种情况分开讨论。
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}

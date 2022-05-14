@@ -50,7 +50,7 @@ $$
 
 如果$n$的第$k$个二进制位为 1，就将$x^{2^{i_{0}}}$计入。
 
-```js
+```javascript
 /**
  * @param {number} x
  * @param {number} n
@@ -79,7 +79,7 @@ _该方法通不过样例`myPow(2.00000, -2147483648)`。_
 
 由一般的每次都乘`x`，改为指数逼近。
 
-```js
+```javascript
 /**
  * @param {number} x
  * @param {number} n

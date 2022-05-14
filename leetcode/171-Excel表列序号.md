@@ -51,7 +51,7 @@ Output: 2147483647
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} columnTitle
  * @return {number}
@@ -65,7 +65,7 @@ var titleToNumber = function (columnTitle) {
 };
 ```
 
-```js
+```javascript
 /**
  * @param {string} columnTitle
  * @return {number}

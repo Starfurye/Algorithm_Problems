@@ -33,7 +33,7 @@
 
 ### 线性查找
 
-```js
+```javascript
 /**
  * @param {number[][]} matrix
  * @param {number} target

@@ -49,7 +49,7 @@
 
 ### 哈希表
 
-```js
+```javascript
 /**
  * // Definition for a Node.
  * function Node(val, next, random) {

@@ -18,7 +18,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number} num
  * @return {number}
@@ -47,7 +47,7 @@ var translateNum = function (num) {
 
 使用两个额外空间：
 
-```js
+```javascript
 /**
  * @param {number} num
  * @return {number}

@@ -29,7 +29,7 @@
 
 ### 哈希表+前缀和
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} k

@@ -37,7 +37,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[][]} costs
  * @return {number}
@@ -56,7 +56,7 @@ var minCost = function (costs) {
 
 空间优化：
 
-```js
+```javascript
 /**
  * @param {number[][]} costs
  * @return {number}

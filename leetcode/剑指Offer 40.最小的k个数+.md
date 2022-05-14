@@ -25,7 +25,7 @@
 
 ### 快速搜索（基于快排划分算法）
 
-```js
+```javascript
 /**
  * @param {number[]} arr
  * @param {number} k
@@ -59,7 +59,7 @@ var getLeastNumbers = function (arr, k) {
 
 ### API
 
-```js
+```javascript
 /**
  * @param {number[]} arr
  * @param {number} k

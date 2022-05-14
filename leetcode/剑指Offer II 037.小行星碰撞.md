@@ -48,7 +48,7 @@
 
 ### 栈
 
-```js
+```javascript
 /**
  * @param {number[]} asteroids
  * @return {number[]}

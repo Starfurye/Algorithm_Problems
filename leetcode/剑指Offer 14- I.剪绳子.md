@@ -26,7 +26,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number} n
  * @return {number}

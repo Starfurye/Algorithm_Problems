@@ -43,7 +43,7 @@
 
 利用栈来进行末尾对齐。
 
-```js
+```javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

@@ -38,6 +38,6 @@
 
 ## Solution
 
-```js
+```javascript
 
 ```

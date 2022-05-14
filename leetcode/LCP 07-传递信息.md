@@ -26,26 +26,26 @@
 
 **限制：**
 
-- `2 <= n <= 10`
-- `1 <= k <= 5`
-- `1 <= relation.length <= 90, 且 relation[i].length == 2`
-- `0 <= relation[i][0],relation[i][1] < n 且 relation[i][0] != relation[i][1]`
+-   `2 <= n <= 10`
+-   `1 <= k <= 5`
+-   `1 <= relation.length <= 90, 且 relation[i].length == 2`
+-   `0 <= relation[i][0],relation[i][1] < n 且 relation[i][0] != relation[i][1]`
 
 ## Solution
 
 ### dfs
 
-```js
+```javascript
 /**
  * @param {number} n
  * @param {number[][]} relation
  * @param {number} k
  * @return {number}
  */
-var numWays = function(n, relation, k) {
+var numWays = function (n, relation, k) {
     let ans = 0;
     let edges = new Array(n).fill(0).map(() => new Array().fill(0));
-    
+
     const dfs = (index, steps) => {
         if (steps === k) {
             if (index === n - 1) {
@@ -57,13 +57,13 @@ var numWays = function(n, relation, k) {
         for (const nextIndex of list) {
             dfs(nextIndex, steps + 1);
         }
-    }
+    };
 
-    for (let [src, dst] of relation) {		// *
+    for (let [src, dst] of relation) {
+        // *
         edges[src].push(dst);
     }
     dfs(0, 0);
     return ans;
 };
 ```
-

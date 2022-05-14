@@ -41,7 +41,7 @@
 
 ### DFS-递归
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -64,7 +64,7 @@ var mirrorTree = function (root) {
 
 ### BFS
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {

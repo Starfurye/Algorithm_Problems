@@ -43,7 +43,7 @@ lRUCache.get(4);    // 返回 4
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {number} key
  * @param {number} value

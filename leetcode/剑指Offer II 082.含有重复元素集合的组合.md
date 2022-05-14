@@ -40,7 +40,7 @@
 
 ### 回溯
 
-```js
+```javascript
 /**
  * @param {number[]} candidates
  * @param {number} target

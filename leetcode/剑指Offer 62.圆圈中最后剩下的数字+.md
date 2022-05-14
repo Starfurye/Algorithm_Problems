@@ -29,7 +29,7 @@
 
 反推
 
-```js
+```javascript
 /**
  * @param {number} n
  * @param {number} m

@@ -35,7 +35,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {number}

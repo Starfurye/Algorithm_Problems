@@ -42,7 +42,7 @@
 
 ### 双指针
 
-```js
+```javascript
 /**
  * @param {number[]} numbers
  * @param {number} target

@@ -21,7 +21,7 @@
 
 ### 摩尔投票法
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
@@ -42,7 +42,7 @@ var majorityElement = function (nums) {
 
 ### 排序
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}

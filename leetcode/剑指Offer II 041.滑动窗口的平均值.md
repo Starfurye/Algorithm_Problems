@@ -36,7 +36,7 @@ movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
 
 ### 链表
 
-```js
+```javascript
 /**
  * @param {number} value
  */

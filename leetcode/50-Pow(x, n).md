@@ -36,7 +36,7 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 计算$x^n$时，可以递归地计算$y=x^{\lfloor\frac{n}{2}\rfloor}$，根据结果，如果$n$为偶数则$x^{n}=y^{2}$，如果$n$为奇数，则$x^{n}=y^{2}\times x$。递归边界$n=0$。
 
-```js
+```javascript
 /**
  * @param {number} x
  * @param {number} n
@@ -68,7 +68,7 @@ $$
 
 如果$n$的第$k$个二进制位为 1，就将$x^{2^{i_{0}}}$计入。
 
-```js
+```javascript
 /**
  * @param {number} x
  * @param {number} n

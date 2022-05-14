@@ -43,7 +43,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} target

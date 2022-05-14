@@ -38,7 +38,7 @@
 
 ### 哈希表
 
-```js
+```javascript
 /**
  * @param {string} s
  * @param {string} t

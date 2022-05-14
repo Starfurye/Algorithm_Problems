@@ -26,15 +26,16 @@
 
 ### 二分
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
+var search = function (nums, target) {
     // 找左边界
-    let left = 0, right = nums.length;
+    let left = 0,
+        right = nums.length;
     while (left < right) {
         let mid = Math.floor((right - left) / 2 + left);
         if (target <= nums[mid]) {
@@ -52,16 +53,17 @@ var search = function(nums, target) {
 };
 ```
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
-	var binarySearch = () => {
-        let left = 0, right = nums.length - 1;  // 闭区间
-    	while (left <= right) {
+var search = function (nums, target) {
+    var binarySearch = () => {
+        let left = 0,
+            right = nums.length - 1; // 闭区间
+        while (left <= right) {
             let mid = Math.floor((right - left) / 2 + left);
             if (nums[mid] === target) return mid;
             else if (nums[mid] > target) {
@@ -71,19 +73,20 @@ var search = function(nums, target) {
             }
         }
         return -1;
-    }
+    };
     let res = binarySearch();
-    if (res === -1) return 0;	// 没有该数字
+    if (res === -1) return 0; // 没有该数字
     let count = 0;
-    for (let i = res - 1; i >= 0; i--) {		// 统计左边的数字
+    for (let i = res - 1; i >= 0; i--) {
+        // 统计左边的数字
         if (nums[i] === nums[res]) count++;
         else break;
     }
-    for (let i = res + 1; i < nums.length; i++) {	// 统计右边的数字
+    for (let i = res + 1; i < nums.length; i++) {
+        // 统计右边的数字
         if (nums[i] === nums[res]) count++;
         else break;
     }
-    return count + 1;							// 加上mid本身
+    return count + 1; // 加上mid本身
 };
 ```
-

@@ -36,7 +36,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * @param {string[]} words
  * @return {number}

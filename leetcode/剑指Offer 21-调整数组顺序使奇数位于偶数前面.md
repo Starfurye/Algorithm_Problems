@@ -19,7 +19,7 @@
 
 ### 双指针
 
-```js
+```javascript
 /**
  * @param {number[]} nums
  * @return {number[]}

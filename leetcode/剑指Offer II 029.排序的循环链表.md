@@ -45,7 +45,7 @@
 
 ## Solution
 
-```js
+```javascript
 /**
  * // Definition for a Node.
  * function Node(val, next) {

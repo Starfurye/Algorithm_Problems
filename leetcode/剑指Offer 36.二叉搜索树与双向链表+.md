@@ -24,7 +24,7 @@
 
 用一个 pre 记录前一个结点。
 
-```js
+```javascript
 /**
  * // Definition for a Node.
  * function Node(val,left,right) {

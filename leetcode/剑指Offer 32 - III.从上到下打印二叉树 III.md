@@ -31,7 +31,7 @@
 
 和前两题一样，但要在奇数层（层数从 0 开始）反转。
 
-```js
+```javascript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {

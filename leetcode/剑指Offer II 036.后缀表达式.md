@@ -64,7 +64,7 @@
 
 ### 栈
 
-```js
+```javascript
 /**
  * @param {string[]} tokens
  * @return {number}

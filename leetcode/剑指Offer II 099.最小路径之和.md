@@ -34,7 +34,7 @@
 
 ### 动态规划
 
-```js
+```javascript
 /**
  * @param {number[][]} grid
  * @return {number}
@@ -58,7 +58,7 @@ var minPathSum = function (grid) {
 
 滚动数组优化：
 
-```js
+```javascript
 /**
  * @param {number[][]} grid
  * @return {number}
