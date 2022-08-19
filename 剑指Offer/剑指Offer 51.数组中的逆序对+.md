@@ -43,3 +43,37 @@ class Solution:
         tmp = [0] * len(nums)
         return merge_sort(0, len(nums) - 1)
 ```
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var reversePairs = function (nums) {
+    const mergeSort = (l, r) => {
+        // zhong
+        if (l >= r) return 0;
+        // fen
+        let m = Math.floor((l + r) / 2);
+        let res = mergeSort(l, m) + mergeSort(m + 1, r);
+        // he
+        for (let i = l; i <= r; i++) {
+            temp[i] = nums[i];
+        }
+        let [i, j] = [l, m + 1];
+        for (let k = l; k < r + 1; k++) {
+            if (i === m + 1) {
+                nums[k] = temp[j++];
+            } else if (j === r + 1 || temp[i] <= temp[j]) {
+                nums[k] = temp[i++];
+            } else {
+                nums[k] = temp[j++];
+                res += m - i + 1;
+            }
+        }
+        return res;
+    };
+    const temp = new Array(nums.length).fill(0);
+    return mergeSort(0, nums.length - 1);
+};
+```
